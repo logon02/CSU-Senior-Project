@@ -37,6 +37,8 @@ Key Guardian is a password generator, checker, and manager of passwords which ar
 
 - SQLite
 
+- Fernet
+
 
 ## Personal Motivation:
 
@@ -50,3 +52,13 @@ Key Guardian will be developed in the Python programming language along with a f
 ## Schedule:
 
 Expected dates for deliverables:
+	
+- Final Proposal and Requirements Document: 	04/10/2023
+- Initial GUI Design: 				08/28/2023
+- GUI and Functionality:			09/18/2023
+- Test Plan:					10/02/2023
+- Encryption for Database:			10/30/2023
+- Full GUI and Added Features:			11/13/2023
+- Testing and Polishing completed:		01/29/2024
+- Final Report:					03/11/2024
+- Project Presentation:				04/15/2024
