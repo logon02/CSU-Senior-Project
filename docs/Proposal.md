@@ -46,7 +46,9 @@ Password security is something that I am passionate about because it is somethin
 
 ## Future Research Efforts:
 
-Key Guardian will be developed in the Python programming language along with a few libraries listed above in order to cerate the GUI and local database. This software is cross-platform and will be available on Windows, Mac OS, and Linux. The files will all be included in the download and the database file that stores the passwords will be created on the first execution of the program. Key Guardian is a full GUI with all functions built-in from the start. 
+Key Guardian will be developed in the Python programming language along with a few libraries listed above in order to cerate the GUI and local database. This software is cross-platform and will be available on Windows, Mac OS, and Linux. The files will all be included in the download and the database file that stores the passwords will be created on the first execution of the program. Key Guardian is a full GUI with all functions built-in from the start.
+
+For this project, I do not yet know how to display a full database in Python software and I also do not how to encrypt it. I am not sure how I will check each password for the level of security, but I have thought of a few options such as checking for the level of entropy for each string. I also have considered creating my own algorithm to determine the randomness of a password. These are the main issues that I will work through throughout my time creating the Key Guardian software.
 
 
 ## Schedule:
