@@ -55,10 +55,10 @@ Expected dates for deliverables:
 	
 - Final Proposal and Requirements Document: 	04/10/2023
 - Initial GUI Design: 				09/04/2023
-- Generation of Passwords                       09/11/2023
-- Creation and Displaying Database              09/11/2023
-- Adding and Removing to/from Database          09/18/2023
-- Password Security Checker                     10/02/2023
+- Generation of Passwords:                      09/11/2023
+- Creation and Displaying Database:             09/11/2023
+- Adding and Removing to/from Database:         09/18/2023
+- Password Security Checker:                    10/02/2023
 - GUI and Full Functionality:			10/09/2023
 - Test Plan:					10/16/2023
 - Encryption for Database:			10/30/2023
