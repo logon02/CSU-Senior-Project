@@ -39,6 +39,8 @@ Key Guardian is a password generator, checker, and manager of passwords which ar
 
 - Fernet
 
+- PasswordPolicy from password-strength
+
 
 ## Personal Motivation:
 
