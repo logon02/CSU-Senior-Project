@@ -1,6 +1,6 @@
 # KeyGuardian
 
-KeyGuardian is a password generator, checker, and manager of passwords which are stored securely on a local system. This software also helps educate users on how to better protect their online accounts.
+KeyGuardian is a password generator, checker, and manager of passwords that are stored securely in a local database. This software also helps educate users on better protecting their online accounts.
 
 ## Compile/Deploy
 
