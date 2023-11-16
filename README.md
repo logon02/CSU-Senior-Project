@@ -7,7 +7,7 @@ KeyGuardian is a password generator, checker, and manager of passwords that are 
 This software is multi-platform and works on any OS. First, clone the repository:
 
 ```
-$ git clone https://github.com/logon02/CSU-Senior-Project
+$ git clone https://github.com/logon02/CSU-Senior-Project.git
 ```
 
 The latest version of Python must be installed and all these packages with the commands listed below:
