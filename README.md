@@ -19,11 +19,15 @@ $ pip install bcrypt
 
 Now clone the repository:
 
-` $ git clone https://github.com/logon02/CSU-Senior-Project `
+```
+$ git clone https://github.com/logon02/CSU-Senior-Project
+```
 
 Once the repository is cloned and all the packages are installed the program is ready to be run! You can run it from a terminal by navigating to the /CSU-Senior-Project/ directory and use this command:
 
-` $ python3 KeyGuardian.py `
+```
+$ python3 KeyGuardian.py
+```
 
 Another way to run the program is through Visual Studio Code. In VS Code, open the /CSU-Senior-Project/ folder and click the run button at the top right of the screen. You may have to select the latest version of Python in order to run KeyGuardian successfully. If you have any questions about running the software please email me: lcferguson@csustudent.net
 
