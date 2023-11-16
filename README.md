@@ -18,6 +18,7 @@ $ pip install customtkinter
 $ pip install sqlite3
 $ pip install pillow
 $ pip install cryptography
+$ pip install fernet
 $ pip install hashes
 $ pip install password_strength
 $ pip install pyperclip
