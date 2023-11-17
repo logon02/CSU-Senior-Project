@@ -40,5 +40,6 @@ KeyGuardian is a password generator, manager, and breach checker. You can easily
 ## Options
 
 ## Testing
-If you would like to test my software please feel free to do so! KeyGuardian is open-source and uses free libraries available in Python. Test its security and features and let me know of any issues you encounter. To provide feedback, click here ![image](https://github.com/logon02/CSU-Senior-Project/assets/85260424/b31d16aa-d1c0-4bb4-b575-1ee8befc0a89) and use this form. Thanks in advance!
+If you would like to test my software please feel free to do so! KeyGuardian is open-source and uses free libraries available in Python. Test its security and features and let me know of any issues you encounter. To provide feedback, use this form: ![image](https://github.com/logon02/CSU-Senior-Project/assets/85260424/b31d16aa-d1c0-4bb4-b575-1ee8befc0a89) 
+Thanks in advance!
 
