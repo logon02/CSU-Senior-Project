@@ -16,7 +16,7 @@ The latest version of Python must be installed and all these packages with the c
 pip install tk customtkinter pillow cryptography fernet hashes password_strength pyperclip bcrypt
 ```
 
-Once the repository is cloned and all the packages are installed the program is ready to be run! You can run it from a terminal by navigating to the /CSU-Senior-Project/ directory and use this command:
+Once the repository is cloned and all the packages are installed the program is ready to be run! You can run it from a terminal by navigating to the src/KeyGuardian/ directory and use this command:
 
 ```
 python3 KeyGuardian.py
