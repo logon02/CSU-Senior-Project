@@ -10,7 +10,7 @@ This software is multi-platform and works on any OS. First, clone the repository
 git clone https://github.com/logon02/CSU-Senior-Project.git
 ```
 
-The latest version of Python must be installed and all these packages with the commands listed below:
+The latest version of Python must be installed and all these packages with the command listed below:
 
 ```
 pip install tk customtkinter pillow cryptography fernet hashes password_strength pyperclip bcrypt
