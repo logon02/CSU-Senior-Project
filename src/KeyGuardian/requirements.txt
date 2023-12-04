@@ -1,0 +1,10 @@
+# This file includes all the package requirements for KeyGuardian
+tk 
+customtkinter 
+pillow 
+cryptography 
+fernet 
+hashes 
+password_strength 
+pyperclip 
+bcrypt
