@@ -76,6 +76,7 @@ def validate_login():
                 root.unbind("<Return>")
                 root.bind("<Return>", lambda event=None: search())
 
+                root.protocol("WM_DELETE_WINDOW", disable_close)
             else:
                 # Show an error message
                 error_label.config(fg="red", text="Invalid username or password")
@@ -140,6 +141,8 @@ def logout():
         # Rebind the enter key to the login function
         root.unbind("<Return>")
         root.bind("<Return>", lambda event=None: validate_login())
+
+        root.protocol("WM_DELETE_WINDOW", root.destroy)
 
     except Exception as e:
         # Handle exceptions and log the error
@@ -536,7 +539,6 @@ root = tkinter.Tk()
 root.title('KeyGuardian')
 root.iconbitmap('')
 root.geometry('1450x800')
-root.protocol("WM_DELETE_WINDOW", disable_close)
 
 # Makes GUI move with window resize
 root.columnconfigure(0, weight=1)
@@ -606,13 +608,6 @@ login_button.grid(row=3, column=1, columnspan=2, padx=10, pady=10)
 
 # Bind the enter key to the login function
 root.bind("<Return>", lambda event=None: validate_login())
-
-# Exit button
-cancel_path = current_dir + "/cancel-icon.png"
-cancel = CTkImage(Image.open(cancel_path))
-
-exit_btn = customtkinter.CTkButton(login_frame, text="", hover_color='red', width=20, image=cancel, command=close_window)
-exit_btn.grid(row=0, column=1)
 
 # Error label
 error_label = Label(login_frame, font=('Arial', 16))
