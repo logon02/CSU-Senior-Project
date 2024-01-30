@@ -59,7 +59,7 @@ def validate_login():
                 decrypted_data = fernet.decrypt(enc_data)
 
                 # Write the decrypted data to a temporary file
-                with open('KeyGuardian.db', 'wb') as decrypted:
+                with open('KeyGuardian_temp.db', 'wb') as decrypted:
                     decrypted.write(decrypted_data)
 
                 # Clear the entry fields
@@ -76,6 +76,7 @@ def validate_login():
                 root.unbind("<Return>")
                 root.bind("<Return>", lambda event=None: search())
 
+                root.geometry('1450x801')
                 root.protocol("WM_DELETE_WINDOW", disable_close)
             else:
                 # Show an error message
@@ -86,6 +87,7 @@ def validate_login():
 
     except Exception as e:
         # Handle exceptions and log the error
+        print(f"Error during login: {e}")
         error_label.config(fg="red", text="Error during login.")
 
     finally:
@@ -128,7 +130,7 @@ def logout():
 
         fernet = Fernet(key)
 
-        with open('KeyGuardian.db', 'rb') as database:
+        with open('KeyGuardian_temp.db', 'rb') as database:
             data = database.read()
 
         encrypted_data = fernet.encrypt(data)
@@ -136,6 +138,10 @@ def logout():
         with open('KeyGuardian.db', 'wb') as encrypted_database:
             encrypted_database.write(encrypted_data)
 
+        # Delete the temporary file
+        os.remove('KeyGuardian_temp.db')
+
+        root.geometry('1450x800')
         error_label.config(fg="green", text="You've been successfully logged out.")
 
         # Rebind the enter key to the login function
@@ -146,6 +152,7 @@ def logout():
 
     except Exception as e:
         # Handle exceptions and log the error
+        print(f"Error during logout: {e}")
         error_label.config(fg="red", text="Error during logout.")
 
 # Generates a symmetric key for encryption derived from the user password
@@ -281,7 +288,7 @@ def add():
         username = username2_entry.get()
         password = pass_entry.get()
 
-        connection = sqlite3.connect('KeyGuardian.db')
+        connection = sqlite3.connect('KeyGuardian_temp.db')
         cursor = connection.cursor()
 
         # Use placeholders (?) and pass the values as a tuple
@@ -326,7 +333,7 @@ def remove():
     def remove_data():
         website = website_entry.get()
 
-        connection = sqlite3.connect('KeyGuardian.db')
+        connection = sqlite3.connect('KeyGuardian_temp.db')
         cursor = connection.cursor()
 
         # Search through the database
@@ -394,7 +401,7 @@ def remove():
 def search():
     search = search_entry.get()
 
-    connection = sqlite3.connect('KeyGuardian.db')
+    connection = sqlite3.connect('KeyGuardian_temp.db')
     cursor = connection.cursor()
 
     # Retrieve data from the database using partial match
@@ -418,7 +425,7 @@ def search():
 # Shows all the passwords in the text box
 def show_all():
     # Establish database connection
-    connection = sqlite3.connect('KeyGuardian.db')
+    connection = sqlite3.connect('KeyGuardian_temp.db')
     cursor = connection.cursor()
     query = "SELECT * FROM passwords"
     pass_data = cursor.execute(query).fetchall()
@@ -483,10 +490,10 @@ def create_pass():
 
             # Create database to store passwords
             current_dir = os.getcwd()
-            kg_path = current_dir + "/KeyGuardian.db"
+            kg_path = current_dir + "/KeyGuardian_temp.db"
             
             if not os.path.exists(kg_path):
-                conn_kg = sqlite3.connect('KeyGuardian.db')
+                conn_kg = sqlite3.connect('KeyGuardian_temp.db')
                 cursor2 = conn_kg.cursor()
 
                 create_pass = "CREATE TABLE IF NOT EXISTS passwords(Website varchar, Username varchar, Password varchar)"
