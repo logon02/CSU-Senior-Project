@@ -4,7 +4,9 @@ customtkinter
 pillow 
 cryptography 
 fernet 
-hashes 
 password_strength 
 pyperclip 
 bcrypt
+passlib
+py-bcrypt
+hashes
