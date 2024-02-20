@@ -10,13 +10,14 @@ This software is multi-platform and works on any OS. First, clone the repository
 git clone https://github.com/logon02/CSU-Senior-Project.git
 ```
 
-The latest version of Python must be installed and all the packages in the requirements.txt file with the command listed below:
+Navigate to this directory: src/KeyGuardian/ 
+The latest version of Python must be installed and all the packages in the requirements.txt file with the command listed below.
 
 ```
 pip install -r requirements.txt
 ```
 
-Once the repository is cloned and all the packages are installed the program is ready to be run! You can run it from a terminal by navigating to the src/KeyGuardian/ directory and use this command:
+Once the repository is cloned and all the packages are installed the program is ready to be run! You can run it from a terminal by using this command:
 
 ```
 python3 KeyGuardian.py
