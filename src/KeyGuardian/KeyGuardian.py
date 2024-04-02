@@ -76,6 +76,7 @@ def validate_login():
                 root.unbind("<Return>")
                 root.bind("<Return>", lambda event=None: search())
 
+                # Set window size
                 root.geometry('1450x801')
                 root.protocol("WM_DELETE_WINDOW", disable_close)
             else:
@@ -141,7 +142,9 @@ def logout():
         # Delete the temporary file
         os.remove('KeyGuardian_temp.db')
 
+        # Set window size
         root.geometry('1450x800')
+        
         error_label.config(fg="green", text="You've been successfully logged out.")
 
         # Rebind the enter key to the login function
@@ -435,13 +438,18 @@ def show_all():
 
     # Display the results if found
     if pass_data:
-        passwords_text.delete(1.0, END)  # Clear previous content
-        passwords_text.insert(END, "WEBSITE\t      USERNAME\t\t\tPASSWORD")
+        passwords_text.delete(1.0, END)
+        passwords_text.insert(END, "WEBSITE\t\tUSERNAME\t\tPASSWORD")
 
         for row in pass_data:
-            passwords_text.insert(END, f"\n\n{row[0]}\t       {row[1]}\t\t\t{row[2]}")
+            # Clean and strip whitespace from each element in the row
+            cleaned_row = [str(item).strip() for item in row]
+            # Join the cleaned elements with tab separator
+            formatted_row = '\t\t'.join(cleaned_row)
+            # Insert the formatted row into the text widget
+            passwords_text.insert(END, f"\n\n{formatted_row}")
     else:
-        passwords_text.delete(1.0, END)  # Clear previous content
+        passwords_text.delete(1.0, END)
         passwords_text.insert(END, "No data found in the database.")
 
 
